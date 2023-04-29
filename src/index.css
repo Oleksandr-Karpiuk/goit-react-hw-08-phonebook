@@ -1,5 +1,13 @@
 @import-normalize; /* bring in normalize.css styles */
 
+:root {
+  --main-text-color: #212121;
+  --secondary-text-color: #636363;
+  --border-color: #cacaca;
+  --bcg-color: rgba(135, 207, 235, 0.2);
+  --section-bcg-color: rgba(128, 128, 128, 0.1);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,4 +20,28 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
