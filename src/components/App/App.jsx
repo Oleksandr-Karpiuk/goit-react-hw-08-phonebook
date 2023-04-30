@@ -26,10 +26,10 @@ export default class App extends Component {
     data.id = nanoid();
 
     if (equalName)
-      return alert(`This name: ${equalName.name} is already in contacts.`);
+      return alert(`This name ${equalName.name} is already in contacts.`);
     if (equalNumber)
       return alert(
-        `This number: ${equalNumber.number} is already in contacts.`
+        `This number ${equalNumber.number} is already in contacts and belongs to ${equalNumber.name}.`
       );
 
     this.setState(prev => ({ contacts: [data, ...prev.contacts] }));
