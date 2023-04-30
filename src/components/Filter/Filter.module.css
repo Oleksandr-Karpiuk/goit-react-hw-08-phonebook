@@ -17,8 +17,8 @@
   width: 240px;
 
   outline: none;
-  border: 1px solid #333340;
-  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
 
   font-size: 18px;
   letter-spacing: 0.03em;
