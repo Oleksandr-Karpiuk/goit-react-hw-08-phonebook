@@ -6,9 +6,10 @@ const ContactList = ({ contacts, onDelete }) => {
     <ul className={css.contact__list}>
       {contacts.map(({ id, name, number }, idx) => (
         <li key={id} className={css.contact__item}>
-          <p className={css.contact__list__text}>
-            {name}: <span className={css.text__color}>tel: {number}</span>
-          </p>
+          <div>
+            <p className={css.contact__list__text}>{name}</p>
+            <p className={css.text__color}>tel: {number}</p>
+          </div>
           <button
             className={css.contact__list__button}
             onClick={() => onDelete(id)}
