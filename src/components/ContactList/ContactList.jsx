@@ -11,6 +11,7 @@ const ContactList = ({ contacts, onDelete }) => {
             <p className={css.text__color}>tel: {number}</p>
           </div>
           <button
+            type="button"
             className={css.contact__list__button}
             onClick={() => onDelete(id)}
           >
