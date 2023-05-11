@@ -3,16 +3,13 @@ import css from './ContactForrm.module.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 const ContactForm = ({ onSubmit }) => {
-  let name = '';
-  let number = '';
-
   const handleSubmit = (values, action) => {
     onSubmit(values);
     action.resetForm();
   };
 
   return (
-    <Formik initialValues={{ name, number }} onSubmit={handleSubmit}>
+    <Formik initialValues={{ name: '', number: '' }} onSubmit={handleSubmit}>
       <Form>
         <label className={css.contact__label}>
           Name
