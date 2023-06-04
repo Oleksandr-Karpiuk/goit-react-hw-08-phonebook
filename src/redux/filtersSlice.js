@@ -19,3 +19,4 @@ const filterSlice = createSlice({
 
 export const { setFilter } = filterSlice.actions;
 export const filterReducer = filterSlice.reducer;
+// export const getFilter = state => state.filter.filter; - до значення фільтра в сторі ніде не звертаємось

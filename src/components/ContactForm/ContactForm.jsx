@@ -4,8 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { getContacts } from 'redux/selectors';
-import { addContact } from 'redux/contactsSlice';
+import { addContact, getContacts } from 'redux/contactsSlice';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -90,5 +89,5 @@ const ContactForm = () => {
 export default ContactForm;
 
 ContactForm.propTypes = {
-  onSubmit: PropTypes.func,
+  handleSubmit: PropTypes.func,
 };

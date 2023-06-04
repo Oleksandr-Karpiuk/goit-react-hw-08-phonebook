@@ -31,5 +31,5 @@ export default Filter;
 
 Filter.propeTypes = {
   value: PropTypes.string,
-  onChange: PropTypes.func,
+  delayedOnChange: PropTypes.func,
 };
