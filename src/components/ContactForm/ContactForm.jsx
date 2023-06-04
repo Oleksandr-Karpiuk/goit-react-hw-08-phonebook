@@ -1,10 +1,34 @@
 import PropTypes from 'prop-types';
 import css from './ContactForrm.module.css';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { useDispatch, useSelector } from 'react-redux';
+import { getContacts } from 'redux/selectors';
+import { addContact } from 'redux/contactsSlice';
 
-const ContactForm = ({ onSubmit }) => {
+const ContactForm = () => {
+  const dispatch = useDispatch();
+  const contacts = useSelector(getContacts);
+
+  const formData = data => {
+    const equalName = contacts.find(
+      el => el.name.toLowerCase() === data.name.toLowerCase()
+    );
+    const equalNumber = contacts.find(
+      el => el.number.toLowerCase() === data.number.toLowerCase()
+    );
+
+    if (equalName)
+      return alert(`This name ${equalName.name} is already in contacts.`);
+    if (equalNumber)
+      return alert(
+        `This number ${equalNumber.number} is already in contacts and belongs to ${equalNumber.name}.`
+      );
+
+    dispatch(addContact(data));
+  };
+
   const handleSubmit = (values, action) => {
-    onSubmit(values);
+    formData(values);
     action.resetForm();
   };
 
