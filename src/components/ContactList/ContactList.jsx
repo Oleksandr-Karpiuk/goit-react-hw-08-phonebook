@@ -2,11 +2,12 @@ import PropTypes from 'prop-types';
 import css from './ContactList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact, getContacts } from 'redux/contactsSlice';
+import { getFilter } from 'redux/filtersSlice';
 
 const ContactList = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContacts);
-  const filterValue = useSelector(state => state.filter.filter).toLowerCase();
+  const filterValue = useSelector(getFilter).toLowerCase();
 
   const getVisibleContacts = () => {
     return contacts.filter(contact =>
