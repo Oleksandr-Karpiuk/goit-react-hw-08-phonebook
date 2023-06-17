@@ -1,11 +1,34 @@
-.link {
-  display: inline-block;
-  text-decoration: none;
-  padding: 12px;
-  font-weight: 700;
-  color: #2a363b;
+.nav__wrap {
+  display: flex;
+  gap: 10px;
 }
 
-.link.active {
-  color: #e84a5f;
+.link {
+  background-image: linear-gradient(
+    to right,
+    #3d7eaa 0%,
+    #ffe47a 51%,
+    #3d7eaa 100%
+  );
+  padding: 10px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus-visible {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }

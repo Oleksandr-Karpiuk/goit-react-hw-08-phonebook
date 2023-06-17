@@ -32,29 +32,30 @@
 }
 
 .contact__list__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding-top: 5px;
-  padding-bottom: 5px;
-  width: 65px;
-
-  font-size: 18px;
-  letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
-
-  background: var(--bcg-color);
-
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
+  background-image: linear-gradient(
+    to right,
+    #3d7eaa 0%,
+    #ffe47a 51%,
+    #3d7eaa 100%
+  );
+  padding: 10px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
   cursor: pointer;
+  outline: none;
+  border: none;
 }
 
 .contact__list__button:hover,
 .contact__list__button:focus-visible {
-  background-color: #188ae860;
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
