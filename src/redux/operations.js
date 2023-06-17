@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchContacts',
@@ -8,7 +9,7 @@ export const fetchContacts = createAsyncThunk(
       const response = await axios.get('/contacts');
       return response.data;
     } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
+      return thunkAPI.rejectWithValue(toast.error(e.message));
     }
   }
 );
@@ -20,7 +21,7 @@ export const addContact = createAsyncThunk(
       const response = await axios.post('/contacts', receivedAddContact);
       return response.data;
     } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
+      return thunkAPI.rejectWithValue(toast.error(e.message));
     }
   }
 );
@@ -32,7 +33,7 @@ export const deleteContact = createAsyncThunk(
       const response = await axios.delete(`/contacts/${id}`);
       return response.data;
     } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
+      return thunkAPI.rejectWithValue(toast.error(e.message));
     }
   }
 );

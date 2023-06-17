@@ -4,6 +4,7 @@ const styles = {
   container: {
     minHeight: 'calc(100vh - 50px)',
     display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -22,6 +23,12 @@ export default function Home() {
       </Helmet>
       <div style={styles.container}>
         <h1 style={styles.title}>Phonebook welcome page</h1>
+        <img
+          style={styles.img}
+          src="https://www.iconpacks.net/icons/2/free-opened-book-icon-3163-thumb.png"
+          alt="number book"
+          width={300}
+        />
       </div>
     </>
   );

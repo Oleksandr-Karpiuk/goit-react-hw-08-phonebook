@@ -18,10 +18,10 @@ body {
 
   background-image: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.4)
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
     ),
-    url('https://cdn.trendhunterstatic.com/thumbs/380/cool-backgrounds.jpeg?auto=webp');
+    url('https://images.unsplash.com/photo-1547628641-ec2098bb5812?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
